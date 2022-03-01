@@ -17,12 +17,3 @@ const getCurrentConditions = async (key) => {
 
     return data[0];
 }
-
-// getCity('city')
-//     .then(data=> {
-//         return getCurrentConditions(data.Key);
-//     })
-//     .then(data => {
-//         console.log(data)
-//     })
-//     .catch(err => console.log(err));
