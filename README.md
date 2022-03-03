@@ -11,6 +11,10 @@ This project was created to study more about Async JavaScript and Promises, and 
 
 You only need to download it or clone this repository, and execute the index.html file using an extension like LiveServer for Visual Studio Code, or any other HTML renderer of your choice.
 
+### Update
+
+Now it's possible to access it just by going into [this URL!](https://weather-app-victor.herokuapp.com)
+
 ## OBS:
 
 Eu pretendo publicar uma versão em Português BR em breve, mas por enquanto basta traduzir este README para descobrir como acessar o projeto. O projeto em si é simples o suficiente para que mesmo alguém sem conhecimento na língua inglesa possa utilizar sem problemas, portanto publiquei assim mesmo.
