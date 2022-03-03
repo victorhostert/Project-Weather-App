@@ -4,15 +4,7 @@ const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
 
-const updateCity = async (city) => { 
-    const cityDetails = await getCity(city);
-    const weather = await getCurrentConditions(cityDetails.Key);
-
-    return {
-        cityDetails,
-        weather
-    }
-};
+const forecast = new Forecast();
 
 const updateUI = (data) => {
     // destructuring properties
@@ -50,11 +42,26 @@ cityForm.addEventListener('submit', e => {
 
     cityForm.reset();
 
-    updateCity(city)
+    forecast.updateCity(city)
     .then(data => {
         updateUI(data);
     })
     .catch(error => {
         console.log(error);
     });
+
+    // set local storage data
+    localStorage.setItem('city', city);
 });
+
+if (localStorage.getItem('city')){
+    city = localStorage.getItem('city');
+    forecast.updateCity(city)
+        .then(data => {
+            updateUI(data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
+
